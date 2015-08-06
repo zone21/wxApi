@@ -17,14 +17,14 @@
 wxApi.init(function () {
 	var shareData = {
 		title: "太平洋电脑网_中国第一专业IT门户网站",
-		desc: "太平洋电脑网是专业IT门户网站，为用户和经销商提供IT资讯和行情报价，涉及电脑，手机，数码产品，软件等。",
+		desc: "太平洋电脑网是专业IT门户网站。",
 		link: "http://g.pconline.com.cn/",
 		imgUrl: "http://www1.pconline.com.cn/wap/2013/cms/img/logo.png"
 	};
-	wx.onMenuShareAppMessage(shareData);// 监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口
-	wx.onMenuShareTimeline(shareData);// 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
-	wx.onMenuShareQQ(shareData);// 监听“分享到QQ”按钮点击、自定义分享内容及分享结果接口
-	wx.onMenuShareWeibo(shareData);// 监听“分享到微博”按钮点击、自定义分享内容及分享结果接口
+	wx.onMenuShareAppMessage(shareData);// 分享给朋友
+	wx.onMenuShareTimeline(shareData);// 分享到朋友圈
+	wx.onMenuShareQQ(shareData);// 分享到QQ
+	wx.onMenuShareWeibo(shareData);// 分享到微博
 });
 </script>
 ```
@@ -33,9 +33,13 @@ wxApi.init(function () {
 
 可以用微信的扫一扫功能来打开下面的二维码体验
 
-[太平洋电脑网](http://www1.pconline.com.cn/wap/20150116/wxapi/index.html)|[太平洋汽车网](http://www1.pcauto.com.cn/wap/20150116/wxapi/index.html)|[太平洋时尚网](http://www1.pclady.com.cn/wap/20150116/wxapi/index.html)|[太平洋亲子网](http://www1.pcbaby.com.cn/wap/20150116/wxapi/index.html)|[太平洋家居网](http://www1.pchouse.com.cn/wap/20150116/wxapi/index.html)|[太平洋游戏网](http://www1.pcgames.com.cn/wap/20150116/wxapi/index.html)
----|---|---|---|---|---
-![太平洋电脑网](./img/qrcode-pconline.png)|![太平洋汽车网](./img/qrcode-pcauto.png)|![太平洋时尚网](./img/qrcode-pclady.png)|![太平洋亲子网](./img/qrcode-pcbaby.png)|![太平洋家居网](./img/qrcode-pchouse.png)|![太平洋游戏网](./img/qrcode-pcgames.png)
+[太平洋电脑网](http://www1.pconline.com.cn/wap/20150116/wxapi/index.html)|[太平洋汽车网](http://www1.pcauto.com.cn/wap/20150116/wxapi/index.html)|[太平洋时尚网](http://www1.pclady.com.cn/wap/20150116/wxapi/index.html)
+---|---|---
+![太平洋电脑网](./img/qrcode-pconline.png)|![太平洋汽车网](./img/qrcode-pcauto.png)|![太平洋时尚网](./img/qrcode-pclady.png)
+
+[太平洋亲子网](http://www1.pcbaby.com.cn/wap/20150116/wxapi/index.html)|[太平洋家居网](http://www1.pchouse.com.cn/wap/20150116/wxapi/index.html)|[太平洋游戏网](http://www1.pcgames.com.cn/wap/20150116/wxapi/index.html)
+---|---|---
+![太平洋亲子网](./img/qrcode-pcbaby.png)|![太平洋家居网](./img/qrcode-pchouse.png)|![太平洋游戏网](./img/qrcode-pcgames.png)
 
 ## 常见问题
 

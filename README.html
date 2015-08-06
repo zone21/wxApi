@@ -20,7 +20,7 @@ ul,ol{margin:1em 0;padding:0 0 0 2em;}
 li p:last-child{margin:0}
 dd{margin:0 0 0 2em;}
 img{border:0;-ms-interpolation-mode:bicubic;vertical-align:middle;}
-table{border-collapse:collapse;border-spacing:0;}
+table{border-collapse:collapse;border-spacing:0;margin-bottom:1em;}
 td,th{vertical-align:top;padding:4px 10px;border:1px solid #bbb;}
 tr:nth-child(even) td,tr:nth-child(even) th{background:#eee;}
 
@@ -60,14 +60,14 @@ pre .scss .tag,pre .scss .attribute{color:#339;}</style></head><body youdao="bin
 wxApi.init(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
     <span class="keyword">var</span> shareData = {
         title: <span class="string">"太平洋电脑网_中国第一专业IT门户网站"</span>,
-        desc: <span class="string">"太平洋电脑网是专业IT门户网站，为用户和经销商提供IT资讯和行情报价，涉及电脑，手机，数码产品，软件等。"</span>,
+        desc: <span class="string">"太平洋电脑网是专业IT门户网站。"</span>,
         link: <span class="string">"http://g.pconline.com.cn/"</span>,
         imgUrl: <span class="string">"http://www1.pconline.com.cn/wap/2013/cms/img/logo.png"</span>
     };
-    wx.onMenuShareAppMessage(shareData);<span class="comment">// 监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口</span>
-    wx.onMenuShareTimeline(shareData);<span class="comment">// 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口</span>
-    wx.onMenuShareQQ(shareData);<span class="comment">// 监听“分享到QQ”按钮点击、自定义分享内容及分享结果接口</span>
-    wx.onMenuShareWeibo(shareData);<span class="comment">// 监听“分享到微博”按钮点击、自定义分享内容及分享结果接口</span>
+    wx.onMenuShareAppMessage(shareData);<span class="comment">// 分享给朋友</span>
+    wx.onMenuShareTimeline(shareData);<span class="comment">// 分享到朋友圈</span>
+    wx.onMenuShareQQ(shareData);<span class="comment">// 分享到QQ</span>
+    wx.onMenuShareWeibo(shareData);<span class="comment">// 分享到微博</span>
 });
 </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
 </code></pre>
@@ -80,9 +80,6 @@ wxApi.init(<span class="function"><span class="keyword">function</span> <span cl
 <th><a href="http://www1.pconline.com.cn/wap/20150116/wxapi/index.html">太平洋电脑网</a></th>
 <th><a href="http://www1.pcauto.com.cn/wap/20150116/wxapi/index.html">太平洋汽车网</a></th>
 <th><a href="http://www1.pclady.com.cn/wap/20150116/wxapi/index.html">太平洋时尚网</a></th>
-<th><a href="http://www1.pcbaby.com.cn/wap/20150116/wxapi/index.html">太平洋亲子网</a></th>
-<th><a href="http://www1.pchouse.com.cn/wap/20150116/wxapi/index.html">太平洋家居网</a></th>
-<th><a href="http://www1.pcgames.com.cn/wap/20150116/wxapi/index.html">太平洋游戏网</a></th>
 </tr>
 </thead>
 <tbody>
@@ -90,6 +87,19 @@ wxApi.init(<span class="function"><span class="keyword">function</span> <span cl
 <td><img src="./img/qrcode-pconline.png" alt="太平洋电脑网"></td>
 <td><img src="./img/qrcode-pcauto.png" alt="太平洋汽车网"></td>
 <td><img src="./img/qrcode-pclady.png" alt="太平洋时尚网"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><a href="http://www1.pcbaby.com.cn/wap/20150116/wxapi/index.html">太平洋亲子网</a></th>
+<th><a href="http://www1.pchouse.com.cn/wap/20150116/wxapi/index.html">太平洋家居网</a></th>
+<th><a href="http://www1.pcgames.com.cn/wap/20150116/wxapi/index.html">太平洋游戏网</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
 <td><img src="./img/qrcode-pcbaby.png" alt="太平洋亲子网"></td>
 <td><img src="./img/qrcode-pchouse.png" alt="太平洋家居网"></td>
 <td><img src="./img/qrcode-pcgames.png" alt="太平洋游戏网"></td>
