@@ -1,0 +1,121 @@
+<html><head><style id="custom-theme">body{font-family:Georgia,Palatino,'Palatino Linotype',Times,'Times New Roman',serif;font-size:16px;line-height:1.5em;color:#444;}
+body{margin:30px;}
+a{text-decoration:none;}
+p{margin:0 0 1em 0;}
+img{max-width:100%;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;color:#111;line-height:1em;margin:1em 0 15px 0;}
+h4,h5,h6{font-weight:bold;}
+h1{font-size:2.5em;border-bottom:1px solid silver;padding-bottom:.3em;}
+h2{font-size:2em;border-bottom:1px solid silver;padding-bottom:.3em;}
+h3{font-size:1.5em;}
+h4{font-size:1.2em;}
+h5{font-size:1em;}
+h6{font-size:0.9em;}
+blockquote{color:#666666;margin:0;padding-left:1em;border-left:0.5em #EEE solid;}
+hr{display:block;height:2px;border:0;border-top:1px solid #aaa;border-bottom:1px solid #eee;margin:1em 0;padding:0;}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+sup{top:-0.5em;}
+sub{bottom:-0.25em;}
+ul,ol{margin:1em 0;padding:0 0 0 2em;}
+li p:last-child{margin:0}
+dd{margin:0 0 0 2em;}
+img{border:0;-ms-interpolation-mode:bicubic;vertical-align:middle;}
+table{border-collapse:collapse;border-spacing:0;}
+td,th{vertical-align:top;padding:4px 10px;border:1px solid #bbb;}
+tr:nth-child(even) td,tr:nth-child(even) th{background:#eee;}
+
+pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word;border:1px solid #CCC!important;background-color:#F8F8F8;color:#000;}
+pre code{display:block;line-height:1.5em;padding:10px;font-size:12px;font-family:\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;}
+pre .decorator,pre .annotation{color:#000077;}
+pre .attribute{color:#070;}
+pre .value,pre .string,pre .scss .value .string{color:#d14;}
+pre .comment{color:#998;font-style:italic;}
+pre .function .title{color:#900;}
+pre .class{color:#458;}
+pre .id,pre .pseudo,pre .constant,pre .hexcolor{color:teal;}
+pre .variable{color:#336699;}
+pre .javadoc{color:#997700;}
+pre .pi,pre .doctype{color:#3344bb;}
+pre .number{color:#099;}
+pre .important{color:#f00;}
+pre .label{color:#970;}
+pre .preprocessor{color:#579;}
+pre .reserved,pre .keyword,pre .scss .value{color:#000;}
+pre .regexp{background-color:#fff0ff;color:#880088;}
+pre .symbol{color:#990073;}
+pre .symbol .string{color:#a60;}
+pre .tag{color:#007700;}
+pre .at_rule,pre .at_rule .keyword{color:#088;}
+pre .at_rule .preprocessor{color:#808;}
+pre .scss .tag,pre .scss .attribute{color:#339;}</style></head><body youdao="bind"><h1 id="-js-sdk">太平洋网络-微信JS-SDK</h1>
+<p><img src="https://img.shields.io/travis/joyent/node/v0.6.svg" alt="Travis branch"> <img src="https://img.shields.io/gemnasium/mathiasbynens/he.svg?style=flat" alt="Gemnasium"> <img src="https://img.shields.io/apm/l/vim-mode.svg?style=flat" alt="apm"></p>
+<p><a href="http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html">微信JS-SDK</a>是微信公众平台面向网页开发者提供的基于微信内的网页开发工具包。通过使用微信JS-SDK，网页开发者可借助微信高效地使用拍照、选图、语音、位置等手机系统的能力，同时可以直接使用微信分享、扫一扫、卡券、支付等微信特有的能力，为微信用户提供更优质的网页体验。</p>
+<p>根据微信JS-SDK官方的使用步骤，并针对我们公司【太平洋网络】现有的六网公众账号，统一封装了一个较为简单的公共接口【六网均可使用】。</p>
+<h2 id="-">快速使用</h2>
+<p>使用之前必须先引用wxApi.min.js</p>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"./src/wxApi.min.js"</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre>
+<h3 id="1-">1、简单使用自定义分享功能</h3>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
+wxApi.init(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+    <span class="keyword">var</span> shareData = {
+        title: <span class="string">"太平洋电脑网_中国第一专业IT门户网站"</span>,
+        desc: <span class="string">"太平洋电脑网是专业IT门户网站，为用户和经销商提供IT资讯和行情报价，涉及电脑，手机，数码产品，软件等。"</span>,
+        link: <span class="string">"http://g.pconline.com.cn/"</span>,
+        imgUrl: <span class="string">"http://www1.pconline.com.cn/wap/2013/cms/img/logo.png"</span>
+    };
+    wx.onMenuShareAppMessage(shareData);<span class="comment">// 监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口</span>
+    wx.onMenuShareTimeline(shareData);<span class="comment">// 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口</span>
+    wx.onMenuShareQQ(shareData);<span class="comment">// 监听“分享到QQ”按钮点击、自定义分享内容及分享结果接口</span>
+    wx.onMenuShareWeibo(shareData);<span class="comment">// 监听“分享到微博”按钮点击、自定义分享内容及分享结果接口</span>
+});
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre>
+<h3 id="2-">2、其他拓展功能</h3>
+<p>请参考下面的DEMO</p>
+<p>可以用微信的扫一扫功能来打开下面的二维码体验</p>
+<table>
+<thead>
+<tr>
+<th><a href="http://www1.pconline.com.cn/wap/20150116/wxapi/index.html">太平洋电脑网</a></th>
+<th><a href="http://www1.pcauto.com.cn/wap/20150116/wxapi/index.html">太平洋汽车网</a></th>
+<th><a href="http://www1.pclady.com.cn/wap/20150116/wxapi/index.html">太平洋时尚网</a></th>
+<th><a href="http://www1.pcbaby.com.cn/wap/20150116/wxapi/index.html">太平洋亲子网</a></th>
+<th><a href="http://www1.pchouse.com.cn/wap/20150116/wxapi/index.html">太平洋家居网</a></th>
+<th><a href="http://www1.pcgames.com.cn/wap/20150116/wxapi/index.html">太平洋游戏网</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="./img/qrcode-pconline.png" alt="太平洋电脑网"></td>
+<td><img src="./img/qrcode-pcauto.png" alt="太平洋汽车网"></td>
+<td><img src="./img/qrcode-pclady.png" alt="太平洋时尚网"></td>
+<td><img src="./img/qrcode-pcbaby.png" alt="太平洋亲子网"></td>
+<td><img src="./img/qrcode-pchouse.png" alt="太平洋家居网"></td>
+<td><img src="./img/qrcode-pcgames.png" alt="太平洋游戏网"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="-">常见问题</h2>
+<h3 id="1-">1、注意</h3>
+<p>用了微信JS-SDK代码之后，必须把页面上传到六网主域【.pconline.com.cn】【.pcauto.com.cn】【.pclady.com.cn】【.pcbaby.com.cn】【.pcgames.com.cn】【.pchouse.com.cn】才会起作用，用本机ip地址在微信的webview上打开是不行的哦。</p>
+<h3 id="2-api-">2、用了这个API怎么没生效？</h3>
+<p>可能您的微信版本不是最新的，请到APPSTORE或者各大安卓市场下载最新的微信版本。</p>
+<p>Android 自定义分享接口需升级至 6.0.2.58 版本及以上。IOS需升级至 6.1 版本及以上。</p>
+<p>升级到最新版本之后，如果还没生效，请先回到这里，扫描上面的二维码Demo，首先验证Demo是否能运行正确；然后再参照demo调整自己的代码：</p>
+<ul>
+<li>页面是否有上传到六网域名地址？</li>
+<li>wxApi.js路径是否引用正确？</li>
+<li>WeixinApi.ready是否正确执行了？（可以在里面加一个alert，简单粗暴可依赖）</li>
+<li>如果依然有问题，请联系我。</li>
+</ul>
+<h3 id="3-">3、如果想兼容旧版本该怎么做？</h3>
+<p>目前官方已经出了这个正式版本的SDK，旧版微信虽然也有一些相关的API接口，但比较混乱，因此，我们建议是不做兼容，呼吁大家还是尽早升级到最新版本来，这对大家来说是好事，以后出什么问题，官方渠道应该都会第一时间给出解决方案，稳定很多，也不至于经常被黑。</p>
+<p>如果非要兼容的话，可用以下方案：【不保证稳定性】</p>
+<ul>
+<li>用UA判断微信的webview版本</li>
+<li>微信版本如果大于6.1则使用本接口</li>
+<li>微信版本如果小于6.1则使用旧版接口</li>
+<li>旧版可参考使用@Alien封装好的接口 <a href="https://github.com/zxlie/WeixinApi">https://github.com/zxlie/WeixinApi</a></li>
+</ul>
+</body></html>
