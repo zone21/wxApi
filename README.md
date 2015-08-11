@@ -7,10 +7,8 @@
 
 ## 快速使用
 
-使用之前必须先引用wxApi.min.js
-```html
-<script src="./src/wxApi.min.js" charset="utf-8"></script>
-```
+使用之前必须先引用这个脚本 然后
+
 ### 1、简单使用自定义分享功能
 ```html
 <script type="text/javascript">
