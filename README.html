@@ -21,7 +21,7 @@ li p:last-child{margin:0}
 dd{margin:0 0 0 2em;}
 img{border:0;-ms-interpolation-mode:bicubic;vertical-align:middle;}
 table{border-collapse:collapse;border-spacing:0;margin-bottom:1em;}
-td,th{vertical-align:top;padding:4px 10px;border:1px solid #bbb;}
+td,th{padding:4px 10px;border:1px solid #bbb;}
 tr:nth-child(even) td,tr:nth-child(even) th{background:#eee;}
 
 pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word;border:1px solid #CCC!important;background-color:#F8F8F8;color:#000;}
@@ -52,9 +52,7 @@ pre .scss .tag,pre .scss .attribute{color:#339;}</style></head><body youdao="bin
 <p><a href="http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html">微信JS-SDK</a>是微信公众平台面向网页开发者提供的基于微信内的网页开发工具包。通过使用微信JS-SDK，网页开发者可借助微信高效地使用拍照、选图、语音、位置等手机系统的能力，同时可以直接使用微信分享、扫一扫、卡券、支付等微信特有的能力，为微信用户提供更优质的网页体验。</p>
 <p>根据微信JS-SDK官方的使用步骤，并针对我们公司【太平洋网络】现有的六网公众账号，统一封装了一个较为简单的公共接口【六网均可使用】。</p>
 <h2 id="-">快速使用</h2>
-<p>使用之前必须先引用wxApi.min.js</p>
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"./src/wxApi.min.js"</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-</code></pre>
+<p>使用之前必须先引用这个脚本 然后</p>
 <h3 id="1-">1、简单使用自定义分享功能</h3>
 <pre><code class="lang-html"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
 wxApi.init(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
